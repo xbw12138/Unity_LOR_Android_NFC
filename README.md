@@ -5,8 +5,6 @@
 游戏下载链接
 Last release: [Download](http://android.myapp.com/myapp/detail.htm?apkName=com.XBW.nfcgame)
 
- ![image](http://pp.myapp.com/ma_pic2/0/shot_12268298_2_1454647251/550)
-
 Unity游戏工程比较大，上传Github有点不太合适，这里把NFC接口放出来吧，Unity的NFC接口。
 Unity没有提供NFC功能，所以需要Android原生开发。
 
@@ -14,34 +12,36 @@ Unity没有提供NFC功能，所以需要Android原生开发。
 就可以了，Android studio的也可以，自己试试吧。
 
 Unity里如何使用
+
+```
 //NFC写入模式
-using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
-                    {
-                        using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity"))
-                        {
-                            //调用Android插件中UnityTestActivity中StartActivity0方法，stringToEdit表示它的参数
-                            jo.Call("StartActivity0", name1);
-                        }
-                    }
-                    
+using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer")){
+	using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity")){
+			//调用Android插件中UnityTestActivity中StartActivity0方法，stringToEdit表示它的参数
+			jo.Call("StartActivity0", name1);
+	}
+}
+
+```
+
+```
 //NFC读取模式
-using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
-                    {
-                        using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity"))
-                        {
-                            //调用Android插件中UnityTestActivity中StartActivity0方法，stringToEdit表示它的参数
-                            jo.Call("StartActivity1", name);
-                        }
-                    }
+using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer")){
+	using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity")){
+			//调用Android插件中UnityTestActivity中StartActivity0方法，stringToEdit表示它的参数
+			jo.Call("StartActivity1", name);
+	}
+}
+```   
+
+```
 //NFC写入回调接口
-    void reNFC(string str)
-    {
-        
-    }
-//
+void reNFC(string str){}
+```             
+
+```
 //NFC感应接口
-    void NFC(string str)
-    {
-        
-    }
-    
+void NFC(string str){}
+```
+
+
