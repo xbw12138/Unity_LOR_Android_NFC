@@ -1,0 +1,25 @@
+//unity传进来需要写入的数据写入NFC
+    public void StartActivity0(String name)
+    {
+    		mName=name;
+    		//if(!mWriteMode)
+    		//enableTagWriteMode();
+    	enableTagWriteMode();
+    }
+    //关闭读取，打开写入
+    public void StartActivity1(String name)
+    {
+    	//mName=name;
+    	enableTagReadMode();
+    	//mWriteMode=false;
+    }
+
+
+回调接口
+ UnityPlayer.UnitySendMessage("Player","reNFC",reNFC);
+挂载给Player物体
+
+void reNFC（string reNFC）
+{
+	
+}

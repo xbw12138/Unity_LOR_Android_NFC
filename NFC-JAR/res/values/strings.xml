@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="warning_nfc_is_off">NFC目前关闭!</string>
+    <string name="turn_on_nfc">请点击进入设置开启NFC功能</string>
+    <string name="ready_to_write">准备写入NFC标签</string>
+    <string name="ready_to_write_instructions">将你的NFC标签放在手机NFC感应区域</string> 
+    <string name="app_name">NFCGAME</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="new_tag_found">读取数据</string>
+    <string name="replace_current_tag">将数据显示在编辑框</string>
+    
+</resources>

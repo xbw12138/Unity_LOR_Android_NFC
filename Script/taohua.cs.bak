@@ -1,0 +1,34 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class taoha : MonoBehaviour {
+
+ public Texture2D[] ani;
+  private int index = 0;
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		 if (quanju.energy == 3)
+        {
+            flash();
+        }
+        else
+        {
+            index = 0;
+            renderer.enabled = false;
+        }
+	
+	}
+	
+	 public void flash()
+    {
+        index++;
+        index %= ani.Length;
+        renderer.enabled = true;
+        renderer.material = ani[index];
+    }
+}

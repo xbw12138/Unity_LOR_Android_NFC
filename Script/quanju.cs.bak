@@ -1,0 +1,17 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class quanju{
+
+    public static int life=5;
+    public static int energy=0;
+    public static float shield=0;
+    public static int score;
+
+    public static int openbomp = 1;
+    public static int yinxiao = 1;
+    public static int yinyue = 1;
+
+    public static int model = 1;
+
+}
